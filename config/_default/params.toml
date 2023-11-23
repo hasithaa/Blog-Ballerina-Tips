@@ -106,7 +106,7 @@ cacheRemoteImages = false
   # recently updated posts settings
   # 最近更新文章设置
   [section.recentlyUpdated]
-    enable = true
+    enable = false
     rss = true
     days = 30
     maxCount = 10
@@ -475,7 +475,7 @@ cacheRemoteImages = false
       # Or 或者
       # someCSS = "https://cdn.example.com/some.css"
     [page.library.js]
-      # someJavaScript = "some.js"
+      someJavaScript = "js/tips.js"
       # [page.library.js.someOtherJavaScript]
       #   src = "someOther.js"
       #   defer = false
@@ -493,8 +493,8 @@ cacheRemoteImages = false
     # Publisher info
     # 出版者信息
     [page.seo.publisher]
-      name = "xxxx"
-      logoUrl = "/images/avatar.webp"
+      name = "Hasitha Aravinda"
+      logoUrl = "/images/og.png"
   # Related content config
   # 相关文章推荐配置
   [page.related]
@@ -506,7 +506,7 @@ cacheRemoteImages = false
 [sponsor]
   enable = false
   bio = "If you find this post helpful, please consider sponsoring."
-  link = "https://github.com/sponsors/HEIGE-PCloud"
+  link = "https://github.com/sponsors/hasithaa"
   # custom = "<a href=\"https://www.buymeacoffee.com/PCloud\" target=\"_blank\"><img src=\"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png\" alt=\"Buy Me A Coffee\" style=\"height: 40px !important;width: 145 !important;\" ></a>"
 
 # TypeIt config
