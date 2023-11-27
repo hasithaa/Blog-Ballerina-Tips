@@ -1,0 +1,121 @@
+
+.folder-tree {
+    list-style: none !important; 
+    cursor: pointer;
+}
+
+.folder-tree li {
+    font-size: 14px;
+    transition: all .4s ease;
+    position: relative;
+}
+
+.folder-tree li ul {
+    padding-left: 10px;
+    padding-top: 8px;
+}
+
+.folder-tree ul {
+    display: none;
+    position: relative;
+}
+
+.folder-tree ul:before {
+    position: absolute;
+    content: '';
+    left: -10px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: transparent;
+    border-left: dashed 1px #c2c2c2;
+    border-bottom: dashed 1px #c2c2c2;
+}
+
+.folder-tree li ul li {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.folder-tree .arrow {
+    position: absolute;
+    top: 4px;
+    left: -14px;
+    width: 8px;
+    height: 8px;
+    transition: all .4s ease;
+    transform: rotate(-90deg);
+}
+
+.folder-tree .arrow i {
+    color: #595959;
+    transition: all .4s ease;
+}
+
+.folder-tree .arrow:hover i {
+    color: #292929;
+}
+
+.folder-tree li.expanded>ul {
+    display: block;
+}
+
+.folder-tree li.expanded>.arrow {
+    transform: rotate(0deg);
+}
+
+.sourceview {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.tabcontent {
+    width: 100%;
+    display: block;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+}
+
+.tabs {
+    width: 100%;
+}
+
+.filename {
+    display: inline-block;
+}
+
+.tablinks {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color: #007bff;
+    text-align: left;
+}
+
+.tablinks:hover {
+    color: #0056b3;
+}
+
+.tablinks.active {
+    color: #0056b3;
+    border-bottom: 2px solid #007bff;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.tabcontent:target,
+.tabcontent:active {
+    display: block;
+}
+
+.example-view button {
+    background-color: transparent !important;
+    color: inherit !important;
+}
+
