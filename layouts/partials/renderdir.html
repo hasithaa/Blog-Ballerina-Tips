@@ -64,6 +64,9 @@
             {{- else if (strings.HasSuffix $key.Name ".yaml")}}
                 {{- $supported = true }}
                 {{- $icon = "far fa-file-code" }}
+            {{- else if (strings.HasSuffix $key.Name ".csv")}}
+                {{- $supported = true }}
+                {{- $icon = "far fa-file-code" }}
             {{- end }}
             {{- if eq $supported true }}
                 <li><i class="{{$icon}}"></i>&nbsp;<button class="tablinks" title="Show File"
