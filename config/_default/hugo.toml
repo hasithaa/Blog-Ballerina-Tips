@@ -30,3 +30,9 @@ theme = "DoIt"
 # [module]
 # [[module.imports]]
 # path = "github.com/HEIGE-PCloud/DoIt"
+
+[module]
+[[module.mounts]]
+  source = 'content'
+  target = 'content'
+  excludeFiles = ['/**/README.md']
