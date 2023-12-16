@@ -5,26 +5,26 @@
 {{- $Output := default true (.Get "output")}}
 {{- $data := .Site.Data.site }}
 
-<div class="example-view mt-3 mb-3">
+<div class="example-view">
     <div class="details admonition example open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ol fa-fw"></i>Source Files<i class="details-icon fas fa-angle-right fa-fw"></i>
         </div>
         <div class="details-content">
             <div class="admonition-content">
-                <div class="folder-tree-wrapper col col-lg-3">
+                <div class="folder-tree-wrapper">
                     <div>
                         <ul class="folder-tree">
                             {{ partial "renderdir.html" (dict "Path" (print "content/" .Page.File.Dir) "Page" .Page "Test" $Test
                             "Project" $Project "Root" true)}}
                         </ul>
                     </div>
-                    <div style="font-size: x-small; text-align: right;">
+                    <!-- <div style="font-size: x-small; text-align: right;">
                         <a target="_blank" href="vscode://wso2.ballerina/open-repo?repoUrl={{ .Site.Params.exampleRepo | safeURL }}"
                             title="Open in VSCode">
                             Open in VSCode
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -57,7 +57,7 @@
     </div>
 </div>
 
-
+{{if eq $Output true }}
 <div class="details admonition success">
     <div class="details-summary admonition-title">
         <i class="icon fas fa-check-circle fa-fw"></i>Output<i class="details-icon fas fa-angle-right fa-fw"></i>
@@ -71,3 +71,4 @@
         </div>
     </div>
 </div>
+{{end}}

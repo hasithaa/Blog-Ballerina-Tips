@@ -11,13 +11,14 @@
 }
 
 .folder-tree li ul {
-    padding-left: 10px;
-    padding-top: 8px;
+    padding-left: 2rem !important;
+    padding-top: 0rem !important;
 }
 
 .folder-tree ul {
     display: none;
     position: relative;
+    margin: 0rem !important;
 }
 
 .folder-tree ul:before {
@@ -39,8 +40,8 @@
 
 .folder-tree .arrow {
     position: absolute;
-    top: 4px;
-    left: -14px;
+    top: 0.5rem;
+    left: -1.5rem;
     width: 8px;
     height: 8px;
     transition: all .4s ease;
@@ -62,6 +63,8 @@
 
 .folder-tree li.expanded>.arrow {
     transform: rotate(0deg);
+    top: 0rem;
+    left: -1rem;
 }
 
 .sourceview {
