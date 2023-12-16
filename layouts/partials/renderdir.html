@@ -85,11 +85,12 @@
             <li><i class="{{$icon}}"></i>&nbsp;<button class="tablinks" title="Show File"
                     onclick="openCode(event, '{{ $key.Name }}')"
                     {{- if eq $Default $key.Name}}id="defaultOpen" 
-                    {{- else if eq $count 1}}id="defaultOpen" {{- end }}>{{- $key.Name }}</button>
+                    {{- else if and (eq $count 1) (eq $Default "")}}id="defaultOpen" {{- end }}>{{- $key.Name }}</button>
             </li>
             {{- $fileContents := $Page.Scratch.Get "contents" }}
             {{- $content := os.ReadFile (path.Join $path .Name) }}
             {{- $fileContents = merge $fileContents (dict .Name $content)}}
+            <!-- Checks for details -->
             {{- $details := (print .Name ".md")}}
             {{- $detailsPath := path.Join $path $details }}
             {{- if os.FileExists $detailsPath }}
