@@ -4,7 +4,41 @@
 {{- $Project := default true (.Get "project")}}
 {{- $Output := default true (.Get "output")}}
 {{- $data := .Site.Data.site }}
-
+{{- $default := default "" (.Get "default")}}
+{{with .Get "hr"}}
+<hr>
+{{end}}
+{{with .Get "repo"}}
+<p>
+    <i class="fas fa-info-circle fa-fw"></i> You are viewing an example hosted in a <a target="_blank" href="{{ . | safeURL }}">Github repository</a>.
+</p>
+<div style="text-align: center; display: flex; align-items: center !important; justify-content: center; flex-wrap: wrap; flex-direction: row; align-content: flex-start;">
+    <div style="margin: auto;">
+        <a target="_blank" href="{{ . | safeURL }}">
+            <img alt="View in Github" title="View in Github"
+            src="https://img.shields.io/static/v1?logo=github&label=&message=View%20in%20Github&labelColor=2c2c32&color=2c2c32&logoColor=white" />
+        </a>
+    </div>
+    <div style="margin: auto;">
+        <a target="_blank" href="{{ replace . "github.com" "github.dev" | safeURL }}">
+            <img alt="Edit in Github.dev" title="Edit in Github.dev"
+            src="https://img.shields.io/static/v1?logo=github&label=&message=Edit%20in%20Github.dev&labelColor=2c2c32&color=2c2c32&logoColor=white" />
+        </a>
+    </div>
+    <div style="margin: auto;">
+        <a target="_blank" href="{{ replace . "github.com" "codespaces.new" | safeURL }}">
+            <img alt="Open in Github Codespaces" title="Open in Github Codespaces"
+            src="https://img.shields.io/static/v1?logo=github&label=&message=Open%20in%20Github%20Codespaces&labelColor=2c2c32&color=2c2c32&logoColor=white" />
+        </a>
+    </div>
+    <div style="margin: auto;">
+        <a target="_blank" href="{{ print "vscode://wso2.ballerina/open-repo?repoUrl=" . | safeURL }}">
+            <img alt="Open in VSCode" title="Open in VSCode"
+            src="https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc" />
+        </a>
+    </div>
+</div>
+{{end}}
 <div class="example-view">
     <div class="details admonition example open">
         <div class="details-summary admonition-title">
@@ -16,15 +50,9 @@
                     <div>
                         <ul class="folder-tree">
                             {{ partial "renderdir.html" (dict "Path" (print "content/" .Page.File.Dir) "Page" .Page "Test" $Test
-                            "Project" $Project "Root" true)}}
+                            "Project" $Project "Root" true "Default" $default)}}
                         </ul>
                     </div>
-                    <!-- <div style="font-size: x-small; text-align: right;">
-                        <a target="_blank" href="vscode://wso2.ballerina/open-repo?repoUrl={{ .Site.Params.exampleRepo | safeURL }}"
-                            title="Open in VSCode">
-                            Open in VSCode
-                        </a>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -56,7 +84,6 @@
         {{- end }}
     </div>
 </div>
-
 {{if eq $Output true }}
 <div class="details admonition success">
     <div class="details-summary admonition-title">

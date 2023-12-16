@@ -33,20 +33,20 @@
   weight = 3
 [[main]]
   identifier = "tags"
-  pre = ""
+  pre = "<i class='fa fa-solid fa-tags fa-fw'></i>"
   post = ""
   name = "Tags"
   url = "/tags/"
   title = ""
   weight = 4
-[[main]]
-  identifier = "categories"
-  pre = ""
-  post = ""
-  name = "Categories"
-  url = "/categories/"
-  title = ""
-  weight = 5
+# [[main]]
+#   identifier = "categories"
+#   pre = ""
+#   post = ""
+#   name = "Categories"
+#   url = "/categories/"
+#   title = ""
+#   weight = 5
 [[main]]
   identifier = "series"
   pre = ""
@@ -55,6 +55,14 @@
   url = "/series/"
   title = ""
   weight = 6
+[[main]]
+  identifier = "playground"
+  pre = "<i class='fa fa-play fa-fw'></i>"
+  post = ""
+  name = "Playground"
+  url = "https://codespaces.new/hasithaa/codespaces-ballerina?quickstart=1"
+  title = ""
+  weight = 7
 # [[main]]
 #   identifier = "authors"
 #   pre = ""
@@ -87,3 +95,9 @@
   url = "https://github.com/hasithaa/bal.tips"
   title = "GitHub"
   weight = 9
+[[footer]]
+  identifier = "github"
+  pre = "<i class='fab fa-github fa-fw'></i>"
+  post = ""
+  name = ""
+  url = ""
