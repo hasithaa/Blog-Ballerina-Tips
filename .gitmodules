@@ -4,3 +4,9 @@
 [submodule "content/samples/mock"]
 	path = content/samples/mock
 	url = https://github.com/hasithaa/Ballerina-Mock-Services/
+[submodule "samples/short"]
+	path = samples/short
+	url = https://github.com/hasithaa/Ballerina-Examples
+[submodule "content/samples/short"]
+	path = content/samples/short
+	url = https://github.com/hasithaa/Ballerina-Examples

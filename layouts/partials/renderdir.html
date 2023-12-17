@@ -86,7 +86,7 @@
                     onclick="openCode(event, '{{ $key.Name }}')"
                     {{- if eq $Default $key.Name}}id="defaultOpen" 
                     {{- else if and (eq $count 1) (eq $Default "")}}id="defaultOpen" {{- end }}>{{- $key.Name }}</button>
-            </li>
+            
             {{- $fileContents := $Page.Scratch.Get "contents" }}
             {{- $content := os.ReadFile (path.Join $path .Name) }}
             {{- $fileContents = merge $fileContents (dict .Name $content)}}
@@ -94,14 +94,13 @@
             {{- $details := (print .Name ".md")}}
             {{- $detailsPath := path.Join $path $details }}
             {{- if os.FileExists $detailsPath }}
-                <li class="text-info"><span class="p-2"></span>
-                    <i class="fas fa-share fa-flip-vertical"></i>
-                    <button class="tablinks" title="See Details"
-                        onclick="openCode(event, '{{ $details }}')"><i class="far fa-lightbulb"></i> Tips</button>
-                </li>
+                <i style="margin: 0 1rem;" class="fas fa-long-arrow-alt-right"></i>
+                <button class="tablinks" title="See Details"
+                    onclick="openCode(event, '{{ $details }}')"><i class="far fa-lightbulb"></i> Code Explained</button>
                 {{- $mdcontent := os.ReadFile $detailsPath }}
                 {{- $fileContents = merge $fileContents (dict $details $mdcontent)}}
             {{- end }}
+            </li>
             {{- $Page.Scratch.Set "contents" $fileContents }}
         {{- end }}
     {{end}}
