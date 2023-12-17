@@ -28,7 +28,7 @@
   pre = ""
   post = ""
   name = "Examples"
-  url = "/categories/examples/"
+  url = "/examples/"
   title = ""
   weight = 3
 [[main]]

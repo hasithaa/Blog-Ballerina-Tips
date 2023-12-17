@@ -10,7 +10,6 @@ tags:
     - byte
 categories:
     - Numeric Literal
-    - Examples
 Series:
     - Working with Types
 keywords:
