@@ -19,5 +19,6 @@ description: A full list of examples written in the Ballerina programming langua
 
 ### HTTP
 
+* [Basic HTTP Service](/samples/short/7_http/basic_http_service/). A simple HTTP service with a query parameter.
 * [REST Hello World](/samples/mock/helloworldservice/). A simple hello world service. 
 * [Simple Stock Quote Service](/samples/mock/simplestockquoteservice/). A simple stock quote service.
