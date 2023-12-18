@@ -3,7 +3,7 @@
 	url = https://github.com/HEIGE-PCloud/DoIt.git
 [submodule "content/samples/http"]
 	path = content/samples/http
-	url = https://github.com/hasithaa/Ballerina-Mock-Services/
+	url = https://github.com/hasithaa/Ballerina-Mock-Services
 [submodule "content/samples/basic"]
 	path = content/samples/basic
 	url = https://github.com/hasithaa/Ballerina-Examples
