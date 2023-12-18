@@ -15,14 +15,14 @@
   # 将鼠标悬停在此菜单链接上时将显示标题。
   title = ""
   weight = 1
-[[main]]
-  identifier = "documentation"
-  pre = ""
-  post = ""
-  name = "Docs"
-  url = "/categories/docs/"
-  title = ""
-  weight = 2
+# [[main]]
+#   identifier = "documentation"
+#   pre = ""
+#   post = ""
+#   name = "Docs"
+#   url = "/categories/docs/"
+#   title = ""
+#   weight = 2
 [[main]]
   identifier = "examples"
   pre = ""

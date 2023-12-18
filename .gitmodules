@@ -1,12 +1,9 @@
 [submodule "themes/DoIt"]
 	path = themes/DoIt
 	url = https://github.com/HEIGE-PCloud/DoIt.git
-[submodule "content/samples/mock"]
-	path = content/samples/mock
+[submodule "content/samples/http"]
+	path = content/samples/http
 	url = https://github.com/hasithaa/Ballerina-Mock-Services/
-[submodule "samples/short"]
-	path = samples/short
-	url = https://github.com/hasithaa/Ballerina-Examples
-[submodule "content/samples/short"]
-	path = content/samples/short
+[submodule "content/samples/basic"]
+	path = content/samples/basic
 	url = https://github.com/hasithaa/Ballerina-Examples

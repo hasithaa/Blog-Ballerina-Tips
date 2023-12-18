@@ -5,13 +5,15 @@ description: A full list of examples written in the Ballerina programming langua
 
 ## Getting Started
 
-* [Hello World Main](/samples/short/1_basic/hello_world_main) A simple hello world program.
+* [Hello World Main](/samples/basic/1_basic/hello_world_main) A simple hello world program.
 
 ## Statements
 
 
 ## Expressions
 
+### Literals
+* [Nil Literal](/samples/basic/expressions/literals/nil/). Nil literal uses the syntax `()` and `null`.
 
 ## Language Libraries
 
@@ -19,6 +21,6 @@ description: A full list of examples written in the Ballerina programming langua
 
 ### HTTP
 
-* [Basic HTTP Service](/samples/short/7_http/basic_http_service/). A simple HTTP service with a query parameter.
-* [REST Hello World](/samples/mock/helloworldservice/). A simple hello world service. 
-* [Simple Stock Quote Service](/samples/mock/simplestockquoteservice/). A simple stock quote service.
+* [Basic HTTP Service](/samples/basic/7_http/basic_http_service/). A simple HTTP service with a query parameter.
+* [REST Hello World](/samples/http/helloworldservice/). A simple hello world service. 
+* [Simple Stock Quote Service](/samples/http/simplestockquoteservice/). A simple stock quote service.

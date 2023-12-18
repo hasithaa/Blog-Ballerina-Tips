@@ -127,6 +127,7 @@ cacheRemoteImages = false
 # Page config
 # 文章页面配置
 [page]
+  featuredImagePreview="/images/example_cover.png"
   # whether to hide a page from home page
   # 是否在主页隐藏一篇文章
   hiddenFromHomePage = false
