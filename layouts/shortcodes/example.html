@@ -11,7 +11,49 @@
     {{end}}
 {{end}}
 <div class="example-view">
-    <div class="details admonition example open">
+    {{with .Get "repo"}}
+        <div class="details quote">
+            <div class="details-summary" style="font-size: small;text-align: right;">
+                <i class="icon fas fa-edit fa-fw"></i>Edit/Run this example
+                <i class="details-icon fas fa-angle-right fa-fw"></i>
+            </div>
+            <div class="details-content">
+                <div class="admonition-content">
+                    <p>
+                        <i class="fa fa-lightbulb fa-fw"></i>You are viewing an example hosted in a <a target="_blank" href="{{ . | safeURL }}">Github repository</a>.
+                        To open this quickly in your IDE, Click on the buttons below.
+                    </p>
+                    <div style="text-align: center; display: flex; align-items: center !important; justify-content: center; flex-wrap: wrap; flex-direction: row; align-content: flex-start;">
+                        <div style="margin: auto;">
+                            <a target="_blank" href="{{ . | safeURL }}">
+                                <img alt="View in Github" title="View in Github"
+                                src="https://img.shields.io/static/v1?logo=github&label=&message=View%20in%20Github&labelColor=2c2c32&color=2c2c32&logoColor=white" />
+                            </a>
+                        </div>
+                        <div style="margin: auto;">
+                            <a target="_blank" href="{{ replace . "github.com" "github.dev" | safeURL }}">
+                                <img alt="Edit in Github.dev" title="Edit in Github.dev"
+                                src="https://img.shields.io/static/v1?logo=github&label=&message=Edit%20in%20Github.dev&labelColor=2c2c32&color=2c2c32&logoColor=white" />
+                            </a>
+                        </div>
+                        <div style="margin: auto;">
+                            <a target="_blank" href="{{ replace . "github.com" "codespaces.new" | safeURL }}">
+                                <img alt="Run in Github Codespaces" title="Run in Github Codespaces"
+                                src="https://img.shields.io/static/v1?logo=github&label=&message=Run%20in%20Github%20Codespaces&labelColor=2c2c32&color=2c2c32&logoColor=white" />
+                            </a>
+                        </div>
+                        <div style="margin: auto;">
+                            <a target="_blank" href="{{ print "vscode://wso2.ballerina/open-repo?repoUrl=" . | safeURL }}">
+                                <img alt="Open in VSCode" title="Open in VSCode"
+                                src="https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{end}}
+    <div class="details admonition quote open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ol fa-fw"></i>Source Files<i class="details-icon fas fa-angle-right fa-fw"></i>
         </div>
@@ -58,40 +100,8 @@
         {{- end }}
     </div>
 </div>
-{{with .Get "repo"}}
-<p>
-    <i class="fa fa-lightbulb fa-fw"></i>You are viewing an example hosted in a <a target="_blank" href="{{ . | safeURL }}">Github repository</a>.
-    Want to open this quickly in your IDE? Click on the buttons below.
-</p>
-<div style="text-align: center; display: flex; align-items: center !important; justify-content: center; flex-wrap: wrap; flex-direction: row; align-content: flex-start;">
-    <div style="margin: auto;">
-        <a target="_blank" href="{{ . | safeURL }}">
-            <img alt="View in Github" title="View in Github"
-            src="https://img.shields.io/static/v1?logo=github&label=&message=View%20in%20Github&labelColor=2c2c32&color=2c2c32&logoColor=white" />
-        </a>
-    </div>
-    <div style="margin: auto;">
-        <a target="_blank" href="{{ replace . "github.com" "github.dev" | safeURL }}">
-            <img alt="Edit in Github.dev" title="Edit in Github.dev"
-            src="https://img.shields.io/static/v1?logo=github&label=&message=Edit%20in%20Github.dev&labelColor=2c2c32&color=2c2c32&logoColor=white" />
-        </a>
-    </div>
-    <div style="margin: auto;">
-        <a target="_blank" href="{{ replace . "github.com" "codespaces.new" | safeURL }}">
-            <img alt="Open in Github Codespaces" title="Open in Github Codespaces"
-            src="https://img.shields.io/static/v1?logo=github&label=&message=Open%20in%20Github%20Codespaces&labelColor=2c2c32&color=2c2c32&logoColor=white" />
-        </a>
-    </div>
-    <div style="margin: auto;">
-        <a target="_blank" href="{{ print "vscode://wso2.ballerina/open-repo?repoUrl=" . | safeURL }}">
-            <img alt="Open in VSCode" title="Open in VSCode"
-            src="https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc" />
-        </a>
-    </div>
-</div>
-{{end}}
 {{if eq $Output true }}
-<div class="details admonition success open">
+<div class="details admonition quote open">
     <div class="details-summary admonition-title">
         <i class="icon fas fa-check-circle fa-fw"></i>Output<i class="details-icon fas fa-angle-right fa-fw"></i>
     </div>
@@ -105,6 +115,7 @@
     </div>
 </div>
 {{end}}
+
 {{with .Get "hr"}}
     {{ if or (eq . "down") (eq . "both")}}
         <hr>

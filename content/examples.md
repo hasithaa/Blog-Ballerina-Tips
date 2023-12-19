@@ -14,6 +14,7 @@ description: A full list of examples written in the Ballerina programming langua
 
 ### Literals
 * [Nil Literal](/samples/basic/expressions/literals/nil/). Nil literal uses the syntax `()` and `null`.
+* [Boolean Literal](/samples/basic/expressions/literals/boolean/). A boolean true is written as `true` and a boolean false is written as `false`.
 
 ## Language Libraries
 

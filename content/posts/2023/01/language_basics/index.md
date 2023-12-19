@@ -23,7 +23,7 @@ featuredImage: /language_basics/main.png
 Welcome to the world of Ballerina! Let's get started with writing a "Hello World" program.
 First start by creating a file called **main.bal**, and open it up in a text editor such as Visual Studio Code (VSCode). To get the best experience, be sure to install the Ballerina Extension. Save the file with the following code.  
 
-<!-- more -->
+<!--more-->
 
 {{% code_summary "samples/short/1_basic/hello_world_main" %}}
 

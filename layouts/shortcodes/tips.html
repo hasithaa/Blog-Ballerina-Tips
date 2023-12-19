@@ -1,0 +1,33 @@
+{{ $index := default -1 (.Get "index" )}}
+{{ $Page := .Page }}
+{{ $Path := (print "content/" $Page.File.Dir)}}
+
+{{ if eq $index -1 }}
+    {{ range $key := os.ReadDir $Path }}
+        {{ $index = add $index 1}}
+        {{ range $key2 := os.ReadDir $Path }}
+            {{ $tipName := print "tip" $index ".md" }}
+            {{ if eq $key2.Name $tipName }}
+            {{- $Data := (os.ReadFile ( path.Join $Path $key2.Name)) }}
+            {{- $Lines := split $Data "\n" }}
+            {{- $Header := index $Lines 0 }}
+            {{- $Body := "" }}
+            {{- range $i, $line := $Lines }}
+                {{- if gt $i 0 }}
+                    {{- $Body = print $Body $line "\n" }}
+                {{- end }}
+            {{- end }}
+            <div class="details admonition tip open">
+                <div class="details-summary admonition-title">
+                    <i class="icon fas fa-lightbulb fa-fw"></i> Tip {{$index}}: {{$Header | markdownify}}<i class="details-icon fas fa-angle-right fa-fw"></i>
+                </div>
+                <div class="details-content">
+                    <div class="admonition-content">{{ $Body | markdownify }}</div>
+                </div>
+            </div>
+            {{ end }}
+        {{end }}
+    {{ end}}
+{{ else }}
+            <!-- TODO -->
+{{ end}}
