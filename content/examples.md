@@ -16,13 +16,13 @@ description: A full list of examples written in the Ballerina programming langua
 
 A literal is a value that is specified directly in the source code. Ballerina supports the following literals.
 
-| Literals               | Examples                                          |
-| ---------------------- | ------------------------------------------------ |
-| [Nil Literal](/samples/basic/expressions/literals/nil/)            | `()`, `null`                                     |
-| [Boolean Literal](/samples/basic/expressions/literals/boolean/)        | `true` or `false`                                |
-| [Numeric Literals](/samples/basic/expressions/literals/numeric/)        | `123`, `0x1A`, `456.78`, `12.3f`, `12.3d`, `1.23e3`, `0X1a.A`   |
-| [String Literal](/samples/basic/expressions/literals/string/)          | `"Hello, World!"`                                |
-| Byte Array Literal     | ``base16 `AB 12 34` `` <br/>  ``base64 `A1z+` `` |
+| Literals                                                              | Examples                                                      |
+| --------------------------------------------------------------------- | ------------------------------------------------------------- |
+| [Nil Literal](/samples/basic/expressions/literals/nil/)               | `()`, `null`                                                  |
+| [Boolean Literal](/samples/basic/expressions/literals/boolean/)       | `true` or `false`                                             |
+| [Numeric Literals](/samples/basic/expressions/literals/numeric/)      | `123`, `0x1A`, `456.78`, `12.3f`, `12.3d`, `1.23e3`, `0X1a.A` |
+| [String Literal](/samples/basic/expressions/literals/string/)         | `"Hello, World!"`                                             |
+| [Byte Array Literal](/samples/basic/expressions/literals/byte_array/) | ``base16 `AB 12 34` `` <br/>  ``base64 `A1z+` ``              |
 
 ## Language Libraries
 
