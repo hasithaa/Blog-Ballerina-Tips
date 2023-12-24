@@ -13,10 +13,16 @@ description: A full list of examples written in the Ballerina programming langua
 ## Expressions
 
 ### Literals
-* [Nil Literal](/samples/basic/expressions/literals/nil/). Nil literal uses the syntax `()` and `null`.
-* [Boolean Literal](/samples/basic/expressions/literals/boolean/). A boolean true is written as `true` and a boolean false is written as `false`.
-* [Numeric Literals](/samples/basic/expressions/literals/numeric/). Numeric literals are used to represent numbers in Ballerina. `int`, `float`, and `decimal` are the numeric types supported in Ballerina.
 
+A literal is a value that is specified directly in the source code. Ballerina supports the following literals.
+
+| Literals               | Examples                                          |
+| ---------------------- | ------------------------------------------------ |
+| [Nil Literal](/samples/basic/expressions/literals/nil/)            | `()`, `null`                                     |
+| [Boolean Literal](/samples/basic/expressions/literals/boolean/)        | `true` or `false`                                |
+| [Numeric Literals](/samples/basic/expressions/literals/numeric/)        | `123`, `0x1A`, `456.78`, `12.3f`, `12.3d`, `1.23e3`, `0X1a.A`   |
+| [String Literal](/samples/basic/expressions/literals/string/)          | `"Hello, World!"`                                |
+| Byte Array Literal     | ``base16 `AB 12 34` `` <br/>  ``base64 `A1z+` `` |
 
 ## Language Libraries
 
